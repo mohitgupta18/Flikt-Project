@@ -1,4 +1,4 @@
-# src/summarization.py
+
 from transformers import pipeline
 import nltk
 import numpy as np
@@ -6,8 +6,6 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 nltk.download('punkt')
 from nltk.tokenize import sent_tokenize
-
-# Abstractive
 def AbstractiveSummarize(texts, min_length=20, max_length=80):
     Summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
     Joined = "\n".join(texts) if isinstance(texts, list) else texts
