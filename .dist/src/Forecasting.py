@@ -6,7 +6,6 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.linear_model import LinearRegression
 from datetime import timedelta
 
-# Optional: Prophet for advanced forecasting
 try:
     from prophet import Prophet
     PROPHET_AVAILABLE = True
